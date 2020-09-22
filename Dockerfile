@@ -44,7 +44,8 @@ RUN pecl install \
 # Install and enable php extensions
 RUN docker-php-ext-enable \
     imagick \
-    xdebug
+    xdebug \
+    mysqli
 RUN docker-php-ext-configure zip --with-libzip
 RUN docker-php-ext-install \
     curl \
@@ -59,7 +60,8 @@ RUN docker-php-ext-install \
     xml \
     gd \
     zip \
-    bcmath
+    bcmath \
+    mysqli
 
 # Install composer
 ENV COMPOSER_HOME /composer
