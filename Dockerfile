@@ -22,6 +22,7 @@ RUN apk add --no-cache \
     git \
     imagemagick \
     libc-dev \
+    libpng \
     libpng-dev \
     make \
     mysql-client \
@@ -34,7 +35,8 @@ RUN apk add --no-cache \
     zlib-dev \
     libzip-dev \
     unzip \
-    libaio
+    libaio \
+    libjpeg-turbo-dev libwebp-dev zlib-dev libxpm-dev
 
 # Install PECL and PEAR extensions
 RUN pecl install \
