@@ -47,13 +47,6 @@ RUN docker-php-ext-enable \
     xdebug
 RUN docker-php-ext-configure zip --with-libzip
 
-RUN apt-get update && apt-get install -y libpng-dev 
-RUN apt-get install -y \
-    libwebp-dev \
-    libjpeg62-turbo-dev \
-    libpng-dev libxpm-dev \
-    libfreetype6-dev
-
 RUN docker-php-ext-configure gd \
     --with-gd \
     --with-webp-dir \
