@@ -67,9 +67,10 @@ RUN docker-php-ext-install \
     xml \
     gd \
     zip \
-    bcmath
+    bcmath \
+    exif
 
-RUN docker-php-ext-install mysqli && docker-php-ext-enable mysqli
+RUN docker-php-ext-install mysqli && docker-php-ext-enable mysqli exif
 
 # Install composer
 ENV COMPOSER_HOME /composer
